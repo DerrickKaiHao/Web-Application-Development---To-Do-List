@@ -1,0 +1,33 @@
+<table class="table table-sm">
+  <!-- <thead>
+    <tr>
+      <th>#</th>
+      <th>Task Title</th>
+      <th>Task Description</th>
+      <th>Category</th>
+      <th>DueDate</th>
+      <th>Status</th>
+    </tr>
+  </thead> -->
+  
+    <!-- <tr *ngFor="let task of taskList; let i = index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{task.title}}</td>
+      <td>{{task.desc}}</td>
+      <td>{{task.catName}}</td>
+      <td>{{task.dueDate}}</td>
+      <td>{{task.status}}</td>
+    </tr> -->
+
+    <div class="task" *ngFor="let task of taskList">
+        {{task.title}} / {{task.dueDate}} / {{task.status}}
+        <br>
+        {{task.desc}}
+        <br>
+        {{task.catName}}
+        
+
+    </div>
+    
+  
+</table>

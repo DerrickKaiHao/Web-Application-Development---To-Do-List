@@ -1,2 +1,38 @@
+<div class="container">
+  <div class="form-group row">
+    <label for="inputName" class="col-sm-3 col-form-label">Task Title</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" placeholder="Category" id="inputTitle" [(ngModel)]="inputInfo.title">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputName" class="col-sm-3 col-form-label">Task Description</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" placeholder="Desc" id="inputDesc" [(ngModel)]="inputInfo.desc">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputName" class="col-sm-3 col-form-label">Category</label>
+    <div class="col-sm-7">
+      <select class="form-control" [(ngModel)]="inputInfo.catName">
+        <option *ngFor="let cat of catList">{{cat.title}}</option>
+        
+      </select>
+    </div>
+  </div>
+<div class="form-group row">
+  <label for="inputName" class="col-sm-3 col-form-label">Due Date</label>
+  <div class="col-sm-7">
+    <input type="date" class="form-control" placeholder="Date" id="inputDate" [(ngModel)]="inputInfo.dueDate">
+  </div>
+</div>
 
+
+<div class="form-group row">
+  <div class="col-sm-8 offset-sm-2">
+    <button type="Add" class="btn btn-primary" (click)="onAddTask()">Add Task</button>
+  </div>
+</div>
+
+  </div>
 
