@@ -43,5 +43,18 @@ export class TaskService {
     return this.taskList.slice();
   }
 
+  // Delete completed
+  // source https://stackoverflow.com/questions/34336633/remove-object-from-js-array-knowing-its-id
 
+  removeTask(taskId){
+    var index = this.taskList.map(x => {
+      return x.taskId;
+    }).indexOf(taskId);
+    
+    this.taskList.splice(index, 1);
+    console.log("success");
+    this.taskAdded.emit();
+    console.log(this.taskList);
+
+  }
 }

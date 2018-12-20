@@ -1,0 +1,22 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 3fr 3fr;
+    grid-gap: 10px;
+    padding: 10px;
+    border-top: 2px solid black;
+  }
+  .navigation {
+
+    border-right: 2px solid black;
+    padding: 5px;
+    text-align: center;
+  }
+
+  .navigation > button{
+      width:300px;
+      margin-bottom:10px;
+}
+
+.grid-container  {
+    background: pink;
+}

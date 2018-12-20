@@ -25,4 +25,10 @@ export class TaskComponent implements OnInit {
 
   }
 
+
+  // triggering the remove function
+  remove(taskId){
+    this.TaskService.removeTask(taskId);
+
+  }
 }
