@@ -11,7 +11,8 @@ export class TaskService {
   // Category
   catAdded = new EventEmitter<void>()
   private catList: Category[] = [
-    new Category('','',''),
+    new Category('Test','For testing','')
+
   ]
 
   constructor() { }

@@ -18,16 +18,20 @@
       <td>{{task.dueDate}}</td>
       <td>{{task.status}}</td>
     </tr> -->
-
-    <div class="task" *ngFor="let task of taskList">
+    <h2 style="text-align:center;">Overview</h2>
+    <span  *ngFor="let task of taskList" >
+        <div class="task">
         {{task.title}} / {{task.dueDate}} / {{task.status}}
         <br>
         {{task.desc}}
         <br>
         {{task.catName}}
+        </div>
         
 
-    </div>
+    </span>
+  
+    
     
   
 </table>

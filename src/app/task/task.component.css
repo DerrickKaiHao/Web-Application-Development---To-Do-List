@@ -1,4 +1,7 @@
 .task{
-    text-align: left;
+    border-left: 6px solid red;
+    background-color: lightgrey;
     padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
 }
