@@ -57,4 +57,20 @@ export class TaskService {
     console.log(this.taskList);
 
   }
+
+  // Status Update Completed
+  completeTask(taskId){
+    var index = this.taskList.map(x => {
+      return x.taskId;
+    }).indexOf(taskId);
+    if(this.taskList[index].status === "completed"){
+      this.taskList[index].status = "pending"
+    }
+    else{
+      this.taskList[index].status = "completed"
+    }
+    
+    this.taskAdded.emit();
+    console.log(this.taskList);
+  }
 }
