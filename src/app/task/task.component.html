@@ -18,17 +18,21 @@
       <td>{{task.dueDate}}</td>
       <td>{{task.status}}</td>
     </tr> -->
-    <h2 style="text-align:center;">Overview</h2>
-    <span  *ngFor="let task of taskList" >
+    <!-- Search: <input type="date" [(ngModel)]="searchStr"> -->
+    <h2 style="text-align:center;">{{title}}</h2>
+    <span  *ngFor="let task of taskList | find:'dueDate':searchStr "  >
         <div class="task">
-        {{task.title}} / {{task.dueDate}} / {{task.status}}
+        <h5>{{task.title}} ---- {{task.status}}</h5> 
+        Due on  :<b style="margin:20px;">{{task.dueDate}}</b>
         <br>
-        {{task.desc}}
+        Category:
+        <b style="margin:9px;">{{task.catName}}</b>
         <br>
-        {{task.catName}}
-       <br>
-       {{task.taskId}}
-       <br>
+        Description: <br>
+        <b>{{task.desc}}</b>
+
+        
+          <br>
        <button id="buttons" class="btn btn-primary" (click)="remove(task.taskId)">Delete</button>
 
        <button id="buttons" class="btn btn-primary" (click)="completed(task.taskId)">Completed</button>

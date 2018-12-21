@@ -30,7 +30,7 @@ export class TaskService {
   // Task
   taskAdded = new EventEmitter<void>()
   private taskList: Task[] = [
-    new Task('title','desc','cat','duedate','id','pending')
+    new Task('New Task','Complete WAD assignment','School','12/12/2018','awsdqwer','pending')
   ]
 
   //Edit
@@ -127,5 +127,6 @@ export class TaskService {
     console.log(this.taskList);
   }
 
+  
 
 }

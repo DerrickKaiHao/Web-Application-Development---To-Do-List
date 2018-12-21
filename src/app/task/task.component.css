@@ -1,14 +1,19 @@
 .task{
-    border-left: 6px solid red;
+    border-left: 3px solid red;
     background-color: lightgrey;
     padding: 10px;
-    width: 85%;
+    width: 90%;
     margin: auto;
     margin-bottom: 20px;
     text-align:left;
 }
 
 #buttons{
-    margin: 10px 5px 0px 10px;
+    margin-right: 5px;
+    margin-top: 50px;
+    padding: 5px;
+    padding-left: 8px;
+    padding-right:8px;
+    
     
 }

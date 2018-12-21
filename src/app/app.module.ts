@@ -8,6 +8,7 @@ import { AddCatComponent } from './add-cat/add-cat.component';
 import { TaskComponent } from './task/task.component';
 import { HomeComponent } from './home/home.component';
 import { EditComponent } from './edit/edit.component';
+import { FindPipe } from './find.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { EditComponent } from './edit/edit.component';
     AddCatComponent,
     TaskComponent,
     HomeComponent,
-    EditComponent
+    EditComponent,
+    FindPipe
   ],
   imports: [
     BrowserModule,

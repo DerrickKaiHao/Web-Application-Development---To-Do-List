@@ -12,6 +12,9 @@ export class TaskComponent implements OnInit {
 
   @Input() taskList: Task[];
 
+  searchStr = "";
+
+
   constructor( public TaskService: TaskService) { }
 
   ngOnInit() {
