@@ -29,15 +29,15 @@ export class EditComponent implements OnInit {
       })
     
   }
-  editted(taskId){
-    console.log("updated");
-    console.log(taskId);
-    this.inputInfo.taskId
-    console.log(this.EditInfo);
+  editted(info){
+    // console.log(info);
+    // console.log(taskId);
+    // console.log(this.inputInfo.taskId);
+    // console.log(this.EditInfo);
 
     // link to services 
     // create update function in services
-
+    this.TaskService.updateTask(info);
 
   }
 

@@ -112,4 +112,20 @@ export class TaskService {
     //get only 1 value --Last item in array
     return this.editList.slice(-1);
   }
+
+
+  // update edits
+  // update task button
+  updateTask(info){
+    var index = this.taskList.map(x => {
+      return x.taskId;
+    }).indexOf(info.taskId);
+    this.taskList[index].title = info.title;
+    this.taskList[index].catName = info.catName;
+    this.taskList[index].desc = info.desc;
+    this.taskList[index].dueDate = info.dueDate;
+    console.log(this.taskList);
+  }
+
+
 }
