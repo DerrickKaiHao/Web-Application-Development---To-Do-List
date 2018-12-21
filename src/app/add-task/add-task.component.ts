@@ -25,6 +25,7 @@ export class AddTaskComponent implements OnInit {
         this.catList = this.TaskService.getCategory();
 
       })
+    
 
   }
 
@@ -63,6 +64,8 @@ export class AddTaskComponent implements OnInit {
       )
     )
     console.log(this.inputInfo);
+
+
 
   }
 

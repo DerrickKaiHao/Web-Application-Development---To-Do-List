@@ -7,6 +7,7 @@ import { AddTaskComponent } from './add-task/add-task.component';
 import { AddCatComponent } from './add-cat/add-cat.component';
 import { TaskComponent } from './task/task.component';
 import { HomeComponent } from './home/home.component';
+import { EditComponent } from './edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { HomeComponent } from './home/home.component';
     AddTaskComponent,
     AddCatComponent,
     TaskComponent,
-    HomeComponent
+    HomeComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

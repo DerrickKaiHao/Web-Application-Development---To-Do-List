@@ -35,4 +35,8 @@ export class TaskComponent implements OnInit {
   completed(taskId){
     this.TaskService.completeTask(taskId);
   }
+
+  edit(taskId){
+    this.TaskService.editTask(taskId);
+  }
 }

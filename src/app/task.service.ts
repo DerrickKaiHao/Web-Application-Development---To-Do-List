@@ -11,7 +11,7 @@ export class TaskService {
   // Category
   catAdded = new EventEmitter<void>()
   private catList: Category[] = [
-    new Category('Test','For testing','')
+    new Category('Test','For testing','asdfqwer')
 
   ]
 
@@ -32,6 +32,13 @@ export class TaskService {
   private taskList: Task[] = [
     new Task('title','desc','cat','duedate','id','pending')
   ]
+
+  //Edit
+  taskEdited = new EventEmitter<void>()
+  private editList: Task[] = [
+    
+  ]
+  
 
   addTask(newTaskInfo){
     this.taskList.push(newTaskInfo)
@@ -72,5 +79,37 @@ export class TaskService {
     
     this.taskAdded.emit();
     console.log(this.taskList);
+  }
+
+  editTask(taskId){
+    var index = this.taskList.map(x => {
+      return x.taskId;
+    }).indexOf(taskId);
+    console.log(this.taskList[index].catName);
+    console.log(this.taskList[index].desc);
+    console.log(this.taskList[index].dueDate);
+    console.log(this.taskList[index].taskId);
+    console.log(this.taskList[index].title);
+
+
+    this.editList.push(
+    new Task(
+        this.taskList[index].title,
+        this.taskList[index].desc,
+        this.taskList[index].catName,
+        this.taskList[index].dueDate,
+        this.taskList[index].taskId,
+        this.taskList[index].status
+    ))
+    
+    this.taskEdited.emit();
+    
+    
+  }
+
+  getEditTask(){
+
+    //get only 1 value --Last item in array
+    return this.editList.slice(-1);
   }
 }
