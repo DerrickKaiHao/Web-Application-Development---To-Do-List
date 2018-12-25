@@ -1,6 +1,6 @@
 .grid-container {
     display: grid;
-    grid-template-columns:4fr 5fr 5fr 5fr;
+    grid-template-columns:1fr 5fr;
     border-top: 2px solid black;
     background: rgb(193, 154, 107);
     height: 100%;
@@ -26,6 +26,7 @@
   border-right: 1px solid rgba(0, 0, 0, 0.8);
   font-size: 15px;
   text-align: center;
+  
 }
 
 
@@ -47,4 +48,9 @@ hr{
  
   
 
+}
+
+.task{
+    display: inline;
+    
 }

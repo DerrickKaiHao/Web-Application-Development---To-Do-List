@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AddCatComponent } from '../add-cat/add-cat.component';
 
 @Component({
   selector: 'app-home',

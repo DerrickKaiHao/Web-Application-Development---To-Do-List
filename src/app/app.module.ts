@@ -9,6 +9,11 @@ import { TaskComponent } from './task/task.component';
 import { HomeComponent } from './home/home.component';
 import { EditComponent } from './edit/edit.component';
 import { FindPipe } from './find.pipe';
+import { AppRoutingModule } from './app-routing.module';
+import { CompletedComponent } from './completed/completed.component';
+import { PendingComponent } from './pending/pending.component';
+import { CategoryComponent } from './category/category.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +23,16 @@ import { FindPipe } from './find.pipe';
     TaskComponent,
     HomeComponent,
     EditComponent,
-    FindPipe
+    FindPipe,
+    CompletedComponent,
+    PendingComponent,
+    CategoryComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

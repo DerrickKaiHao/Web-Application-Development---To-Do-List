@@ -1,20 +1,30 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
+<div class="side">
+  <app-add-cat></app-add-cat>
+  
+  <app-add-task></app-add-task>
+  
+  </div>
+
+  <app-edit></app-edit>
+
+
 <div class="grid-container" style="text-align:center">
 
 <div style="text-align:left;" class="navigation">
 
-  <button class="btn btn-primary"><a>Home</a></button>
+  <button class="btn btn-primary" routerLink="/"><a>Home</a></button>
  
-  <button class="btn btn-primary"><a>Completed</a></button>
+  <button class="btn btn-primary" routerLink="/completed"><a>Completed</a></button>
 
-  <button class="btn btn-primary"><a>Pending</a></button>
-  <button class="btn btn-primary"><a>Category</a></button>
+  <button class="btn btn-primary" routerLink="/pending" ><a>Pending</a></button>
+  <button class="btn btn-primary" routerLink="/category"><a>Category</a></button>
   <br>
   <br>
   <br>
   <br>
-  <button class="btn btn-success"><a>Add Task</a></button>
+  <button class="btn btn-success" (click)="show()"><a>Add Task</a></button>
   <button class="btn btn-success"><a>Add Category</a></button>
 </div>
 
@@ -36,3 +46,4 @@
 </div>
 
 </div>
+
