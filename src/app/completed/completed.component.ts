@@ -1,5 +1,5 @@
 import { Component, OnInit , Output} from '@angular/core';
-
+import { TaskService } from '../task.service';
 @Component({
   selector: 'app-completed',
   templateUrl: './completed.component.html',
@@ -7,9 +7,11 @@ import { Component, OnInit , Output} from '@angular/core';
 })
 export class CompletedComponent implements OnInit {
 
-  constructor() { }
+  constructor(public TaskService: TaskService) { }
 
   ngOnInit() {
   }
-
+  findTask(info){
+    this.TaskService.pushTask(info);
+  }
 }

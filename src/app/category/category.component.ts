@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { TaskService } from '../task.service';
 @Component({
   selector: 'app-category',
   templateUrl: './category.component.html',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryComponent implements OnInit {
 
-  constructor() { }
+  constructor(public TaskService: TaskService) { }
 
   ngOnInit() {
+  }
+  findTask(info){
+    this.TaskService.pushTask(info);
   }
 
 }
