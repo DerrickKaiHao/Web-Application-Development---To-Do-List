@@ -20,7 +20,7 @@
     </tr> -->
     <!-- Search: <input type="date" [(ngModel)]="searchStr"> -->
     <h2 style="text-align:center;">{{title}}</h2>
-    <span style="display:inline-block;padding: 10px;" *ngFor="let task of taskList | find:'dueDate':searchStr "  >
+    <span style="display:inline-block;padding: 10px;" *ngFor="let task of taskList | find: searchType : searchStr "  >
         <div class="task">
         <h5>{{task.title}} ---- {{task.status}}</h5> 
         Due on  :<b style="margin:20px;">{{task.dueDate}}</b>
@@ -43,7 +43,7 @@
 
         
     </span>
-  
+    
     
     
   

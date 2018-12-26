@@ -13,7 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CompletedComponent } from './completed/completed.component';
 import { PendingComponent } from './pending/pending.component';
 import { CategoryComponent } from './category/category.component';
-import { HeaderComponent } from './header/header.component';
+
 
 @NgModule({
   declarations: [
@@ -26,8 +26,7 @@ import { HeaderComponent } from './header/header.component';
     FindPipe,
     CompletedComponent,
     PendingComponent,
-    CategoryComponent,
-    HeaderComponent
+    CategoryComponent
   ],
   imports: [
     BrowserModule,

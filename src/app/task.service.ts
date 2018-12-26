@@ -2,11 +2,15 @@ import { Injectable, EventEmitter } from '@angular/core';
 import { Category } from './cat.model';
 import { Task } from './task.model';
 import { AddTaskComponent } from './add-task/add-task.component';
+import { pipe } from './pipe.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TaskService {
+  //pipe
+  pipeInfo = new EventEmitter<void>()
+  PipeList: pipe[] = []
 
   // Category
   catAdded = new EventEmitter<void>()

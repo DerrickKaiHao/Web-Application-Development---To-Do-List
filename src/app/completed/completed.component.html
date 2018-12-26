@@ -19,29 +19,15 @@
   </div>
   
   <div id="item1" class="grid-item" >
-    <h4 style="background:rgb(243, 5, 5);padding:10px;border-bottom:1px solid black">Today</h4>
-  
-  <app-task></app-task>
+    <h4 style="background:rgb(0, 255, 106);padding:10px;border-bottom:1px solid black">Completed</h4>
+    <app-task class="task"  [inputInfo]="{searchType:'status', searchStr:'completed'}" ></app-task>
+
+
+ 
   </div>
   
-  <div id="item2" class="grid-item">
-    <h4 style="background:rgb(230, 255, 4);padding:10px;border-bottom:1px solid black" >Tomorrow</h4>
-  
-  <app-task ></app-task>
-  </div>
-  <div id="item3" class="grid-item">
-    <h4 style="background:rgb(5, 250, 128);padding:10px;border-bottom:1px solid black" >Overview</h4>
-  
-  <app-task></app-task>
-  </div>
+ 
   
   </div>
-  
-  <div class="side">
-    <app-add-cat></app-add-cat>
-    
-    <app-add-task></app-add-task>
-    
-    </div>
   
     <app-edit></app-edit>

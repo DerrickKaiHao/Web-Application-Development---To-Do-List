@@ -31,18 +31,18 @@
 <div id="item1" class="grid-item" >
   <h4 style="background:rgb(243, 5, 5);padding:10px;border-bottom:1px solid black">Today</h4>
 
-<app-task></app-task>
+<app-task [inputInfo]="{searchType:'dueDate', searchStr:today}" ></app-task>
 </div>
 
 <div id="item2" class="grid-item">
   <h4 style="background:rgb(230, 255, 4);padding:10px;border-bottom:1px solid black" >Tomorrow</h4>
 
-<app-task ></app-task>
+<app-task [inputInfo]="{searchType:'dueDate', searchStr:tomorrow}"></app-task>
 </div>
 <div id="item3" class="grid-item">
   <h4 style="background:rgb(5, 250, 128);padding:10px;border-bottom:1px solid black" >Overview</h4>
 
-<app-task></app-task>
+<app-task ></app-task>
 </div>
 
 </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { TaskService } from '../task.service';
 import { Task } from '../task.model';
+import { pipe } from '../pipe.model';
 
 
 @Component({
@@ -11,8 +12,13 @@ import { Task } from '../task.model';
 export class TaskComponent implements OnInit {
 
   @Input() taskList: Task[];
+  @Input() inputInfo : pipe = new pipe("","");
 
   searchStr = "";
+  searchType = "";
+    
+  
+
 
 
   constructor( public TaskService: TaskService) { }
@@ -25,7 +31,11 @@ export class TaskComponent implements OnInit {
         this.taskList = this.TaskService.getTask();
 
       })
+      console.log(this.inputInfo);
 
+      this.searchStr = this.inputInfo.searchStr;
+      this.searchType = this.inputInfo.searchType;
+      
   }
 
 
@@ -42,4 +52,6 @@ export class TaskComponent implements OnInit {
   edit(taskId){
     this.TaskService.editTask(taskId);
   }
+
+
 }
