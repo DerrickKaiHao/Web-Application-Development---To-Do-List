@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AddCatComponent } from '../add-cat/add-cat.component';
+import { TaskService } from '../task.service';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,8 @@ import { AddCatComponent } from '../add-cat/add-cat.component';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  findInfo = "";
+  constructor(public TaskService: TaskService) { }
   today = "";
   tomorrow = "";
   ngOnInit() {
@@ -17,11 +19,14 @@ export class HomeComponent implements OnInit {
     const month = (date.getMonth())+1;
     const year = (date.getFullYear());
     this.today = day + "/" + month + "/" + year;
-    console.log(this.today);
+    // console.log(this.today);
 
     const tomorrowDay = (date.getDate()+1)
     this.tomorrow = tomorrowDay  + "/" + month + "/" + year;
-    console.log(this.tomorrow)
+    // console.log(this.tomorrow)
+  }
+  findTask(info){
+    this.TaskService.pushTask(info);
   }
 
 

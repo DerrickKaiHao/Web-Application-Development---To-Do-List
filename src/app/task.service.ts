@@ -9,8 +9,8 @@ import { pipe } from './pipe.model';
 })
 export class TaskService {
   //pipe
-  pipeInfo = new EventEmitter<void>()
-  PipeList: pipe[] = []
+  findInfo = new EventEmitter<void>()
+  findList: pipe= new pipe("","");
 
   // Category
   catAdded = new EventEmitter<void>()
@@ -131,6 +131,18 @@ export class TaskService {
     console.log(this.taskList);
   }
 
+  pushTask(info){
+    console.log(info);
+    const type = "title";
+    
+    this.findList = new pipe (type,info)
+    console.log(this.findList);   
+    this.findInfo.emit();
+  }
+
+  getFindInfo(){
+    return this.findList;
+  }
   
 
 }
