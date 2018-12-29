@@ -1,23 +1,24 @@
 <div class="container">
-  <h3 style="text-align:left">New Category</h3>
+
   <div class="form-group row">
-    <label for="inputName" class="col-sm-3 col-form-label">Category Name</label>
-    <div class="col-sm-7">
+    <!-- <label for="inputName" class="col-sm-3 col-form-label">Category Name</label> -->
+    <div style="width:100%" class="addCat">
       <input type="text" class="form-control" placeholder="Category" id="inputTitile" [(ngModel)]="inputInfo.title">
     </div>
   </div>
 
-  <div class="form-group row">
+  <!-- <div class="form-group row">
     <label for="inputDesc" class="col-sm-3 col-form-label">Category description</label>
     <div class="col-sm-7">
       <input type="text" class="form-control" placeholder="description" id="inputDesc" [(ngModel)]="inputInfo.desc">
     </div>
-  </div>
+  </div> -->
 
   <div class="form-group row">
-    <div class="col-sm-8 offset-sm-2">
-      <button type="Add" class="btn btn-primary" (click)="onAddCategory()">Add Category</button>
+    <div style="margin:auto" class="addBtn">
+      <button type="Add" class="btn btn-success" (click)="onAddCategory()">Add Category</button>
     </div>
+
   </div>
   </div>
 
