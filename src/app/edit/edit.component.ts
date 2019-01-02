@@ -13,7 +13,7 @@ export class EditComponent implements OnInit {
   constructor( public TaskService: TaskService) { }
   @Input() EditInfo: Task[];
   @Input() catList: Category[];
-  inputInfo: Task = new Task('','','','','','')
+  inputInfo: Task = new Task('','','','','',0,'')
   
   ngOnInit() {
     this.TaskService.taskEdited

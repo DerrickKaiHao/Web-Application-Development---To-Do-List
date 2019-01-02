@@ -3,29 +3,27 @@
 <div class="grid-container" style="text-align:center">
 
   <div style="text-align:left;" class="navigation">
-    <div style="margin-bottom:15px" class="searchBar">
-      <input style="width:67%;" type="string" [(ngModel)]="findInfo">
-      
-      <button style="margin-left: 10px;" class="btn btn-success" (click)="findTask(findInfo)">Find</button>
+    <div style="margin-bottom:15px"  class="searchBar">
+    <input style="width:75%;" type="string" [(ngModel)]="findInfo">
+    
+    <button style="margin-left: 10px;" class="btn btn-success" (click)="findTask(findInfo)">Find</button>
   </div>
 
-    <button class="btn btn-primary" routerLink="/"><a>Home</a></button>
-   
-    <button class="btn btn-primary" routerLink="/completed"><a>Completed</a></button>
+  <button class="btn btn-primary" routerLink="/"><a>Home</a></button>
+ 
+  <button class="btn btn-primary" routerLink="/completed"><a>Completed</a></button>
+
+  <button class="btn btn-primary" routerLink="/pending" ><a>Pending</a></button>
+  <button class="btn btn-primary" routerLink="/category"><a>Category</a></button>
+  <br>
+  <br>
+
   
-    <button class="btn btn-primary" routerLink="/pending" ><a>Pending</a></button>
-    <button class="btn btn-primary" routerLink="/category"><a>Category</a></button>
-    <br>
-    <br>
-    <br>
-    <br>
-    <button class="btn btn-success"><a>Add Task</a></button>
-    <button class="btn btn-success"><a>Add Category</a></button>
-  </div>
+</div>
   
   <div id="item1" class="grid-item" >
     <h4 style="background:rgb(252, 193, 1);padding:10px;border-bottom:1px solid black">Pending</h4>
-    <app-task class="task"  [inputInfo]="{searchType:'status', searchStr:'pending'}" ></app-task>
+    <app-task class="task"  [inputInfo]="{searchType:'statusDesc', searchStr:'pending'}" ></app-task>
 
 
  
@@ -36,3 +34,6 @@
   </div>
   
     <app-edit></app-edit>
+
+
+    

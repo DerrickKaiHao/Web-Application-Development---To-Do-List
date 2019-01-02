@@ -34,7 +34,7 @@ export class TaskService {
   // Task
   taskAdded = new EventEmitter<void>()
   private taskList: Task[] = [
-    new Task('New Task','Complete WAD assignment','School','12/12/2018','awsdqwer','pending')
+    new Task('New Task','Complete WAD assignment','School','12/12/2018','awsdqwer',0,'pending')
   ]
 
   //Edit
@@ -74,11 +74,14 @@ export class TaskService {
     var index = this.taskList.map(x => {
       return x.taskId;
     }).indexOf(taskId);
-    if(this.taskList[index].status === "completed"){
-      this.taskList[index].status = "pending"
+    if(this.taskList[index].status === 1){
+      this.taskList[index].status = 0;
+      this.taskList[index].statusDesc = "pending";
     }
     else{
-      this.taskList[index].status = "completed"
+      this.taskList[index].status = 1;
+      this.taskList[index].statusDesc = "completed";
+
     }
     
     this.taskAdded.emit();
@@ -103,7 +106,8 @@ export class TaskService {
         this.taskList[index].catName,
         this.taskList[index].dueDate,
         this.taskList[index].taskId,
-        this.taskList[index].status
+        this.taskList[index].status,
+        this.taskList[index].statusDesc
     ))
     
     this.taskEdited.emit();

@@ -1,6 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule, MatCheckboxModule, MatDatepickerModule } from '@angular/material';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import {MatInputModule, MatNativeDateModule} from '@angular/material';
+import { FormsModule, ReactiveFormsModule } from'@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AddTaskComponent } from './add-task/add-task.component';
@@ -13,6 +18,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CompletedComponent } from './completed/completed.component';
 import { PendingComponent } from './pending/pending.component';
 import { CategoryComponent } from './category/category.component';
+import { StatusPipe } from './status.pipe';
 
 
 @NgModule({
@@ -26,12 +32,22 @@ import { CategoryComponent } from './category/category.component';
     FindPipe,
     CompletedComponent,
     PendingComponent,
-    CategoryComponent
+    CategoryComponent,
+    StatusPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    [MatButtonModule, MatCheckboxModule],
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatNativeDateModule,
+    MatSelectModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

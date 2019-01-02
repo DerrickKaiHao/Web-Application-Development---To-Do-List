@@ -12,7 +12,7 @@ import { Category } from '../cat.model';
 export class AddTaskComponent implements OnInit {
 
   @Input() catList: Category[];
-  inputInfo: Task = new Task('','','','','','')
+  inputInfo: Task = new Task('','','','','',0,'')
 
 
   constructor( public TaskService: TaskService ) { }
@@ -48,7 +48,7 @@ export class AddTaskComponent implements OnInit {
 
     const Taskid = this.randomString(8);
     this.inputInfo.taskId = Taskid;
-    const status = "pending";
+    const status = 0;
     this.inputInfo.status = status;
     
 
@@ -59,7 +59,8 @@ export class AddTaskComponent implements OnInit {
         this.inputInfo.catName,
         this.inputInfo.dueDate,
         this.inputInfo.taskId,
-        this.inputInfo.status
+        this.inputInfo.status,
+        this.inputInfo.statusDesc
 
       )
     )
