@@ -8,12 +8,12 @@
 }
 .navigation {
 
-  border-right: 3px solid rgba(0, 0, 0, 0.8);
+  border-right: .5px solid rgba(0, 0, 0, 0.8);
   padding: 15px;
   text-align: center;
   grid-column-start: 1;
   grid-column-end: 2;
-  background-image: linear-gradient(rgb(252, 193, 1),rgb(211, 75, 75));
+  background-image: linear-gradient(#ff758c,#ff7eb3);
   
 }
 

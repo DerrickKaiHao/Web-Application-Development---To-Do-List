@@ -3,10 +3,11 @@
 <div class="grid-container" style="text-align:center">
 
   <div style="text-align:left;" class="navigation">
-    <div style="margin-bottom:15px"  class="searchBar">
-    <input style="width:75%;" type="string" [(ngModel)]="findInfo">
+    <div style="margin-bottom:15px" class="searchBar">
+      <b><label style="color:white">search:</label></b>
+      <input style="width:70%; margin-left:10px" type="string" [(ngModel)]="findInfo" (keyup)="findTask(findInfo)">
+      
     
-    <button style="margin-left: 10px;" class="btn btn-success" (click)="findTask(findInfo)">Find</button>
   </div>
 
   <button class="btn btn-primary" routerLink="/"><a>Home</a></button>
@@ -22,7 +23,7 @@
 </div>
   
   <div id="item1" class="grid-item" >
-    <h4 style="background:rgb(0, 255, 106);padding:10px;border-bottom:1px solid black">Completed</h4>
+    <h4 style="background:#ff758c;padding:10px;border-bottom:1px solid black">Completed</h4>
     <app-task class="task"     [inputInfo]="{searchType:'statusDesc', searchStr:'completed'}"  ></app-task>
 
 

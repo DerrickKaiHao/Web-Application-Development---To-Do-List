@@ -13,7 +13,7 @@
   text-align: center;
   grid-column-start: 1;
   grid-column-end: 2;
-  background-image: linear-gradient(rgb(0, 255, 106), yellow);
+  background-image: linear-gradient(#ff758c,#ff7eb3)
   
   
 }

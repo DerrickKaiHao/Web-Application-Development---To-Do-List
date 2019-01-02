@@ -16,14 +16,14 @@ export class TaskComponent implements OnInit {
   @Input() taskList: Task[];
   @Input() inputInfo : pipe = new pipe("","");
   @Input() findInfo : pipe= new pipe("","");
+  borderleft: string ;
 
   searchStr = "";
   searchType = "";
 
   findType ="";
   findStr ="";
-    
-
+ 
 
 
   constructor( public TaskService: TaskService) { }
@@ -34,7 +34,8 @@ export class TaskComponent implements OnInit {
     this.TaskService.taskAdded
       .subscribe(() => {
         this.taskList = this.TaskService.getTask();
-
+        
+        
       })
       // console.log(this.inputInfo);
 
@@ -70,7 +71,7 @@ export class TaskComponent implements OnInit {
   edit(taskId){
     this.TaskService.editTask(taskId);
   }
-
+  
   
 
 }

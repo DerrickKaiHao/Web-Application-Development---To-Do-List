@@ -19,6 +19,8 @@ import { CompletedComponent } from './completed/completed.component';
 import { PendingComponent } from './pending/pending.component';
 import { CategoryComponent } from './category/category.component';
 import { StatusPipe } from './status.pipe';
+import { StatusDirective } from './status.directive';
+import { ChangeStatusDirective } from './task/change-status.directive';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { StatusPipe } from './status.pipe';
     CompletedComponent,
     PendingComponent,
     CategoryComponent,
-    StatusPipe
+    StatusPipe,
+    StatusDirective,
+    ChangeStatusDirective
   ],
   imports: [
     BrowserModule,

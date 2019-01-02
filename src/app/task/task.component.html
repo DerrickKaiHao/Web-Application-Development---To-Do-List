@@ -19,10 +19,13 @@
       <td>{{task.status}}</td>
     </tr> -->
     <!-- Search: <input type="date" [(ngModel)]="searchStr"> -->
+    
     <h2 style="text-align:center;">{{title}}</h2>
     <span style="display:inline-block;padding: 10px;" *ngFor="let task of taskList | find: searchType : searchStr | find: findType : findStr "  >
-        <div class="task">
+        <div class="task" >
         <h5>{{task.title}}</h5> 
+        Status  :<b style="margin:25px;">{{task.statusDesc}}</b>
+        <br>
         Due on  :<b style="margin:20px;">{{task.dueDate}}</b>
         <br>
         Category:
@@ -31,13 +34,14 @@
         Description: 
         <b>{{task.desc}}</b>
 
+
         
           <br>
        <button id="buttons" class="btn btn-primary" style="width:30%;" (click)="remove(task.taskId)"><img src="assets/trash.svg"> </button>
 
        <button id="buttons" class="btn btn-primary" style="width:30%;" (click)="completed(task.taskId)"><img src="assets/clock.svg"> </button>
 
-       <button id="buttons" class="btn btn-primary" style="width:30%;" (click)="edit(task.taskId)"><img src="assets/edit.svg"> </button>
+       <button id="buttons" class="btn btn-primary"  style="width:30%;" (click)="edit(task.taskId)"><img src="assets/edit.svg"> </button>
 
         </div>
 

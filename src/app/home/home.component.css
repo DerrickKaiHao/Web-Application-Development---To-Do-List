@@ -15,7 +15,7 @@
     grid-column-start: 1;
     grid-column-end: 2;
     /* background: rgb(211, 75, 75); */
-    background-image: linear-gradient(rgb(211, 75, 75), yellow);
+    background-image: linear-gradient(#ff758c,#ff7eb3)
     
   }
 
