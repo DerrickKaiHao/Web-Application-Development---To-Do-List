@@ -1,13 +1,17 @@
-/* .container{
+.container{
     padding: 10px;
-    margin: auto;
+    background: rgb(255, 255, 255);
+    border: 1px solid black;
+    border-radius: 15px;
     margin-top: 10px;
-    margin-bottom: 20px;
-    background: rgb(148, 146, 146);
-    width:800px;
-    padding-left: 100px;
-    color: white;
-    border-radius: 25px;
-
 }
-  */
+ 
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }

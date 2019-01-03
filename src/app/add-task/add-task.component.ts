@@ -13,13 +13,11 @@ import { Category } from '../cat.model';
 export class AddTaskComponent implements OnInit {
 
   @Input() catList: Category[];
+  @Input() taskList: Task[];
   inputInfo: Task = new Task('','','','','',0,'')
   dateInput : Date;
   contactForm : FormGroup;
-
-  @Input() taskList: Task[];
   checkTitle = [];
-
   inputTitle = ""
 
   constructor( public TaskService: TaskService ) { }
@@ -85,9 +83,24 @@ blankSpaces(control: FormControl) : {[s: string] : boolean}{
   return null; // no error found return null
 }
 
-
+sum =0;
   onAddTask(){
 
+    console.log('clicked')
+    this.sum = 0;
+    for(var i =0; i<this.taskList.length;i++){
+      if(this.contactForm.value.title === this.taskList[i].title){
+        this.sum = this.sum  + 1;
+        console.log(this.sum)
+      }
+    }
+    this.checkTask();
+    console.log(this.sum);
+    
+  }
+
+  checkTask(){
+    if(this.sum == 0){
     const Taskid = this.randomString(8);
     this.inputInfo.taskId = Taskid;
     const status = 0;
@@ -108,8 +121,12 @@ blankSpaces(control: FormControl) : {[s: string] : boolean}{
       )
     )
     this.contactForm.reset()
-    
+      }
+      else{
+        alert("No repeats")
+      }
   }
+
 
 
 }

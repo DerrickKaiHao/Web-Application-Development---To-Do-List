@@ -1,40 +1,41 @@
-<div  *ngFor="let info of EditInfo" class="container" >
-    <h3 style="text-align:center;padding-bottom:10px;">Edit Task</h3>
-  <div class="form-group row">
-    <label for="inputName" class="col-sm-3 col-form-label">Task Title</label>
-    <div   class="col-sm-7">
-      <input  type="text" class="form-control" id="inputTitle"  [(ngModel)]="info.title">
+<div  class="container" *ngFor="let info of EditInfo">
+    <div class="col-sm-12 offset-sm-3">
+            <h4>Edit Task</h4>
     </div>
-  </div>
-  <div class="form-group row">
-    <label for="inputName" class="col-sm-3 col-form-label">Task Description</label>
-    <div class="col-sm-7">
-      <input type="text" class="form-control" id="inputDesc"  [(ngModel)]="info.desc">
+                <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-sm">Title</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" [(ngModel)]="info.title">
+              </div>
+      
+           <div class="input-group input-group-sm mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Description</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" [(ngModel)]="info.desc">
+            </div>
+
+        <mat-form-field>
+            <mat-select placeholder="Category" [(ngModel)]="info.catName">
+              <mat-option *ngFor="let cat of catList" [value]="cat.title">{{cat.title}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+    <input style="border:none; border-bottom:0.5px solid black; border-radius: 0px;" type="date" class="form-control" id="inputDate"  [(ngModel)]="info.dueDate">
+
+<br>
+<div class="col-sm-12 offset-sm-3">
+      <button (click)="editted(info)" class="btn btn-primary">Update Task</button>
     </div>
-  </div>
-  <div class="form-group row">
-    <label for="inputName" class="col-sm-3 col-form-label">Category</label>
-    <div class="col-sm-7">
-      <select class="form-control"  [(ngModel)]="info.catName">
-        <option *ngFor="let cat of catList">{{cat.title}}</option>
-        
-      </select>
-    </div>
-  </div>
-<div class="form-group row">
-  <label for="inputName" class="col-sm-3 col-form-label">Due Date</label>
-  <div class="col-sm-7">
-    <input type="date" class="form-control" id="inputDate"  [(ngModel)]="info.dueDate">
-  </div>
 </div>
 
-<div class="form-group row">
-    <div class="col-sm-8 offset-sm-2">
-      <button style="margin-left: 200px;" (click)="editted(info)" class="btn btn-primary">Update Task</button>
-    </div>
-</div>
-</div>
 
+
+
+
+  
+  
 
 
 
