@@ -1,5 +1,23 @@
 .container{
     border: 1px solid black;
     border-radius: 15px;
-    background-color: rgb(166, 166, 167);
+    background-color: rgb(255, 255, 255);
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+input.ng-invalid.ng-touched, textarea.ng-touched.ng-invalid{
+    color: red;
+}
+
+span.help-block{
+    color: red;
+
 }

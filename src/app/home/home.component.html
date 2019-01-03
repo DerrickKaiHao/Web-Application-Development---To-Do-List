@@ -38,13 +38,15 @@
 <div id="item1" class="grid-item" >
   <h4 style="background: #ff758c;;padding:10px;border-bottom:1px solid black">Today</h4>
 
-<app-task [inputInfo]="{searchType:'dueDate', searchStr:today}" ></app-task>
+<app-task  [inputInfo]="{searchType:'dueDate', searchStr:today}" ></app-task>
+<!-- [inputInfo]="{searchType:'dueDate', searchStr:today}" -->
 </div>
 
 <div id="item2" class="grid-item">
   <h4 style="background: #ff758c;;padding:10px;border-bottom:1px solid black" >Tomorrow</h4>
 
 <app-task [inputInfo]="{searchType:'dueDate', searchStr:tomorrow}"></app-task>
+<!-- [inputInfo]="{searchType:'dueDate', searchStr:tomorrow}" -->
 </div>
 <div id="item3" class="grid-item">
   <h4 style="background: #ff758c;;padding:10px;border-bottom:1px solid black" >Overview</h4>
@@ -54,4 +56,5 @@
 
 </div>
 
-<app-edit></app-edit>
+  <app-edit></app-edit>
+

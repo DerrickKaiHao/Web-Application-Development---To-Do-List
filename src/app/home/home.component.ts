@@ -16,13 +16,13 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     const date = new Date;
     const day = (date.getDate());
-    const month = (date.getMonth())+1;
+    const month = (date.getMonth());
     const year = (date.getFullYear());
-    this.today = day + "/" + month + "/" + year;
-    // console.log(this.today);
+    this.today = day + "/" + month + 1 + "/" + year;
+    console.log(this.today);
 
-    const tomorrowDay = (date.getDate()+1)
-    this.tomorrow = tomorrowDay  + "/" + month + "/" + year;
+    const tomorrowDay = (date.getDate())
+    this.tomorrow = tomorrowDay + 1  + "/" + month + 1 + "/" + year;
     // console.log(this.tomorrow)
   }
   findTask(info){

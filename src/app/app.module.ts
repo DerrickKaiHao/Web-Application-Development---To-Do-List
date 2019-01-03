@@ -4,8 +4,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule, MatDatepickerModule } from '@angular/material';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
-import {MatInputModule, MatNativeDateModule} from '@angular/material';
+import {MatInputModule, MatNativeDateModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from'@angular/forms';
+
 
 import { AppComponent } from './app.component';
 import { AddTaskComponent } from './add-task/add-task.component';
@@ -50,7 +51,10 @@ import { ChangeStatusDirective } from './task/change-status.directive';
     MatInputModule,
     ReactiveFormsModule,
     MatNativeDateModule,
-    MatSelectModule
+    MatSelectModule,
+
+
+
 
   ],
   providers: [],

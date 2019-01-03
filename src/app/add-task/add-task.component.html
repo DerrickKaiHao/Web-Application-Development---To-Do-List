@@ -1,44 +1,88 @@
 <div  class="container">
 
-  <div class="form-group row" style="margin-bottom: 0">
-    <label for="inputName" class="col-sm-6 col-form-label">Title</label>
-    <div  class="col-sm-12">
-      <input type="text" class="form-control" placeholder='title' id="inputTitle" [(ngModel)]="inputInfo.title">
-    </div>
-  </div>
-  <div class="form-group row" style="margin-bottom: 0">
-    <label for="inputName" class="col-sm-6 col-form-label">Description</label>
-    <div class="col-sm-12">
-      <input type="text" class="form-control" placeholder="Desc" id="inputDesc" [(ngModel)]="inputInfo.desc">
-    </div>
-  </div>
-  <div class="form-group row" style="margin-bottom: 0">
-    <label for="inputName" class="col-sm-6 col-form-label">Category</label>
-    <div class="col-sm-12">
-      <select class="form-control" [(ngModel)]="inputInfo.catName">
-        <option *ngFor="let cat of catList">{{cat.title}}</option>
+
+  <form [formGroup]="contactForm">
         
-      </select>
-    </div>
-  </div>
-<div class="form-group row" >
-  <label for="inputName" class="col-sm-6 col-form-label">DueDate</label>
-  <div class="col-sm-12">
-    <input type="date" class="form-control" placeholder="Date" id="inputDate" [(ngModel)]="inputInfo.dueDate">
-   
-<!-- <mat-form-field>
-  <input matInput [matDatepicker]="picker" placeholder="Choose a date" [(ngModel)]="inputInfo.dueDate">
-  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-  <mat-datepicker #picker></mat-datepicker>
-</mat-form-field>  -->
+          
+              <!-- TITLE -->
+              <mat-form-field class="example-full-width">
+                  <input matInput placeholder='Title' #inputTitle [formControlName]="'title'">
+                </mat-form-field>
+          
+          <span class="help-block" *ngIf="!contactForm.get('title').valid && contactForm.get('title').touched">
+              <span *ngIf="contactForm.get('title').errors['required']">
+                This field is required
+              </span>
+              <span *ngIf="!contactForm.get('title').errors['required'] && contactForm.get('title').errors['blankSpaces']">
+                Empty string not accepted
+              </span>
+              <!-- <span *ngIf="contactForm.get('title').errors['checkList']">
+                  no repeats
+                </span> -->
+              </span>
+
+              <!-- End of title  -->
+       
+
+              <!-- Description -->
+              <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Description" [formControlName]="'desc'">
+                </mat-form-field>
+
+                <span class="help-block" *ngIf="!contactForm.get('desc').valid && contactForm.get('desc').touched">
+                    <span *ngIf="contactForm.get('desc').errors['required']">
+                      This field is required
+                    </span>
+                    <span *ngIf="!contactForm.get('desc').errors['required'] && contactForm.get('desc').errors['blankSpaces']">
+                      Empty string not accepted
+                    </span>
+                    <span class="help-block" *ngIf="contactForm.get('desc').errors['maxlength']">
+                        Number of character exceeded
+                      </span>
+                  </span>
+         
+              <!-- End of description -->
+
+
+              <!-- Category  -->
+
+              <mat-form-field>
+                  <mat-select placeholder="Category" [formControlName]="'cat'">
+                    <mat-option *ngFor="let cat of catList" [value]="cat.title">{{cat.title}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <br>
+                <span class="help-block" *ngIf="!contactForm.get('cat').valid && contactForm.get('cat').touched">
+                    <span *ngIf="contactForm.get('cat').errors['required']">
+                      This field is required
+                    </span>
+                   
+
+                  </span>
+
+                <!-- End of Category  -->
+
+                <!-- Due Date -->
+          <mat-form-field style="width:100%;">
+              <input matInput [matDatepicker]="picker" placeholder="Due Date" [formControlName]="'dueDate'">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field> 
+            <span class="help-block" *ngIf="!contactForm.get('dueDate').valid && contactForm.get('dueDate').touched">
+                <span *ngIf="contactForm.get('dueDate').errors['required']">
+                  This field is required
+                </span>
+
+              </span>
+            <!-- End of Due Date -->
+            <div class="col-sm-12 offset-sm-3">
+                <button [disabled]="!contactForm.valid" type="Add"  class="btn btn-success"  (click)="onAddTask()">Add Task</button>
+            </div>
+            
     
+    </form>
 
-  </div>
-</div>
-
-
-
-
+<!-- 
 <div class="form-group row">
   <div class="col-sm-12 offset-sm-3">
     <button type="Add"  class="btn btn-success" (click)="onAddTask()">Add Task</button>
@@ -47,7 +91,7 @@
 
  
 
-</div>
+</div> -->
 
-  </div>
+</div>
 

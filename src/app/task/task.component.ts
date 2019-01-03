@@ -2,7 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { TaskService } from '../task.service';
 import { Task } from '../task.model';
 import { pipe } from '../pipe.model';
-import { statusModel } from '../status.model';
+
+
 
 
 
@@ -27,7 +28,7 @@ export class TaskComponent implements OnInit {
 
 
   constructor( public TaskService: TaskService) { }
-
+  
   ngOnInit() {
 
     this.taskList = this.TaskService.getTask();
@@ -72,6 +73,7 @@ export class TaskComponent implements OnInit {
     this.TaskService.editTask(taskId);
   }
   
-  
+
 
 }
+
