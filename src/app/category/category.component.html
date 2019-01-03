@@ -10,14 +10,14 @@
     
   </div>
 
-  <button class="btn btn-primary" routerLink="/"><a>Home</a></button>
+  <button class="btn btn-primary" routerLink="/"><img src="assets/home.svg" style="margin-left: 10px"><a > Home</a></button>
  
-  <button class="btn btn-primary" routerLink="/completed"><a>Completed</a></button>
+  <button class="btn btn-primary" routerLink="/completed"><img src="assets/checked.svg" style="width:25px; "><a > Completed</a></button>
 
-  <button class="btn btn-primary" routerLink="/pending" ><a>Pending</a></button>
-  <button class="btn btn-primary" routerLink="/category"><a>Category</a></button>
+  <button class="btn btn-primary" routerLink="/pending" ><img src="assets/clock.svg" style="width:25px; "><a > Pending</a></button>
+  <button class="btn btn-primary" routerLink="/category"><img src="assets/briefcase.svg" style="width:25px; "><a> Category</a></button>
   <br>
-  <br>
+  <br>  
 
   
 </div>
@@ -27,10 +27,11 @@
     <!-- <app-task class="task"     [inputInfo]="{searchType:'catName', searchStr:'completed'}"  ></app-task> -->
     <span class="cat" *ngFor="let cat of catList">
 
-      {{cat.title}}
-
-
+      <b>{{cat.title}}</b>
+      <app-task [inputInfo]="{searchType:'catName', searchStr:cat.title}"></app-task>
     </span>
+
+    
     
 
 
