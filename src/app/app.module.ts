@@ -19,7 +19,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { CompletedComponent } from './completed/completed.component';
 import { PendingComponent } from './pending/pending.component';
 import { CategoryComponent } from './category/category.component';
-import { StatusPipe } from './status.pipe';
 import { StatusDirective } from './status.directive';
 import { ChangeStatusDirective } from './task/change-status.directive';
 
@@ -36,7 +35,6 @@ import { ChangeStatusDirective } from './task/change-status.directive';
     CompletedComponent,
     PendingComponent,
     CategoryComponent,
-    StatusPipe,
     StatusDirective,
     ChangeStatusDirective
   ],

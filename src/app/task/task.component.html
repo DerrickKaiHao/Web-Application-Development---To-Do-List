@@ -22,7 +22,7 @@
     
     <h2 style="text-align:center;">{{title}}</h2>
     <span style="display:inline-block;padding: 10px;" *ngFor="let task of taskList | find: searchType : searchStr | find: findType : findStr "  >
-        <div class="task" >
+        <div class="task" [appStatus]="{color:'3px solid blue'}">
         <h5>{{task.title}}</h5> 
         Status  :<b style="margin:25px;">{{task.statusDesc}}</b>
         <br>
