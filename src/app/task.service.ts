@@ -133,6 +133,7 @@ export class TaskService {
     this.taskList[index].desc = info.desc;
     this.taskList[index].dueDate = info.dueDate;
     console.log(this.taskList);
+    this.taskAdded.emit();
   }
 
   pushTask(info){

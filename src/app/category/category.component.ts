@@ -28,6 +28,11 @@ export class CategoryComponent implements OnInit {
         
         
       })
+
+      this.TaskService.taskAdded
+        .subscribe(()=>{
+          this.taskList = this.TaskService.getTask();
+        })
       
   }
   findTask(info){

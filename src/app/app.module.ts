@@ -49,7 +49,8 @@ import { ChangeStatusDirective } from './task/change-status.directive';
     MatInputModule,
     ReactiveFormsModule,
     MatNativeDateModule,
-    MatSelectModule,
+    MatSelectModule
+    
 
 
 
