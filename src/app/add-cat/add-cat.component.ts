@@ -94,7 +94,7 @@ blankSpaces(control: FormControl) : {[s: string] : boolean}{
       this.contactForm.reset()
   }
   else{
-    alert("no")
+    alert("The category already exist")
   }
   }
 

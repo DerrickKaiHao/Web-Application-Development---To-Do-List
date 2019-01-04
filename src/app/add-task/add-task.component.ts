@@ -105,6 +105,7 @@ sum =0;
     this.inputInfo.taskId = Taskid;
     const status = 0;
     this.inputInfo.status = status;
+    this.inputInfo.statusDesc = "pending"
     console.log(this.contactForm.value)
     this.contactForm.value.dueDate = this.contactForm.value.dueDate.getDate()+ "/" + this.contactForm.value.dueDate.getMonth()+ 1+"/" +this.contactForm.value.dueDate.getFullYear()
     console.log(this.contactForm.value.dueDate)
@@ -123,7 +124,7 @@ sum =0;
     this.contactForm.reset()
       }
       else{
-        alert("No repeats")
+        alert("The task already exist")
       }
   }
 
