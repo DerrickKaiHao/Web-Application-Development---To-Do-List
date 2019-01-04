@@ -9,12 +9,12 @@
 
   </div>
 
-  <button class="btn btn-primary" routerLink="/"><img src="assets/home.svg" style="margin-left: 10px"><a > Home</a></button>
+  <button style="text-align:left; padding-left: 80px;" class="btn btn-primary" routerLink="/"><img src="assets/home.svg" style="margin-left: 10px"><a > &nbsp; Home</a></button>
  
-  <button class="btn btn-primary" routerLink="/completed"><img src="assets/checked.svg" style="width:25px; "><a > Completed</a></button>
+  <button style="text-align:left; padding-left: 90px;" class="btn btn-primary" routerLink="/completed"><img src="assets/checked.svg" style="width:25px; "><a > &nbsp; Completed</a></button>
 
-  <button class="btn btn-primary" routerLink="/pending" ><img src="assets/clock.svg" style="width:25px; "><a > Pending</a></button>
-  <button class="btn btn-primary" routerLink="/category"><img src="assets/briefcase.svg" style="width:25px; "><a> Category</a></button>
+  <button style="text-align:left; padding-left: 90px;" class="btn btn-primary" routerLink="/pending" ><img src="assets/clock.svg" style="width:25px; "><a > &nbsp; Pending</a></button>
+  <button style="text-align:left; padding-left: 90px;" class="btn btn-primary" routerLink="/category"><img src="assets/briefcase.svg" style="width:25px; "><a> &nbsp; Category</a></button>
   <br>
   <br>
   <app-edit id="theEdit"></app-edit>
@@ -22,7 +22,7 @@
 </div>
   
   <div id="item1" class="grid-item" >
-    <h4 style="background:#ff758c;padding:10px;border-bottom:.5px solid black">Pending</h4>
+    <h4 style="background:#ff758c;padding:10px;border-bottom:.5px solid black; color: whitesmoke">Pending</h4>
     <app-task class="task"  [inputInfo]="{searchType:'statusDesc', searchStr:'pending'}" ></app-task>
 
 
